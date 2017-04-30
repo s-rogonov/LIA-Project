@@ -1,0 +1,5 @@
+#Intellij Idea files
+.idea/
+
+#Java out files
+out/
