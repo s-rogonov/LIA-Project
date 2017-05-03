@@ -1,6 +1,7 @@
 apply plugin: 'idea'
 //and standard one
 apply plugin: 'java'
+apply plugin: 'checkstyle'
 apply plugin: 'application'
 
 mainClassName = "com.company.Main"
@@ -13,8 +14,11 @@ repositories {
 }
 
 dependencies {
-    compile "org.jenkins-ci.main:jenkins-core:2.9"
     testCompile 'junit:junit:4.12'
+}
+
+checkstyle {
+    configFile = new File(rootDir, "checkstyle.xml")
 }
 
 sourceSets {
