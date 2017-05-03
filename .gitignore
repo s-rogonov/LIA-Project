@@ -1,5 +1,8 @@
 #Intellij Idea files
-.idea/
+/.idea/
 
 #Java out files
-out/
+/out/
+
+#Gradle files
+/.gradle/
