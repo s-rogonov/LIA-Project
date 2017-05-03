@@ -3,11 +3,17 @@ apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'application'
 
+mainClassName = "com.company.Main"
+
 repositories {
     jcenter()
+    maven {
+        url 'http://repo.jenkins-ci.org/public/'
+    }
 }
 
 dependencies {
+    compile "org.jenkins-ci.main:jenkins-core:2.9"
     testCompile 'junit:junit:4.12'
 }
 
