@@ -24,12 +24,12 @@ checkstyle {
 sourceSets {
     main {
         java {
-            srcDirs = ['src/com']
+            srcDirs = ['src']
         }
     }
     test {
         java {
-            srcDirs = ['src/test']
+            srcDirs = ['test']
         }
     }
 }
