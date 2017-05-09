@@ -32,7 +32,7 @@ public class MyHandler implements HttpHandler {
                     , URLDecoder.decode(args.get("post"), "UTF-8"));
         }
 
-        response = new StringBuilder("Chat is active");
+        response = new StringBuilder("Chat is active!");
         response = new StringBuilder("<html><body><p>"
                 + response.toString()
                 + "</p><form method=`post`>First name:<br><input type=`text` name=`firstname`><br>Last name:<br><input type=`text` name=`lastname`><br>Your answer?<input type=`text` name=`post` width=`150`><br><input type=`submit`></form>".replace('`', '"'));
