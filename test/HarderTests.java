@@ -37,9 +37,9 @@ public class HarderTests {
                     "jdbc:mysql://localhost:3306/chat", "app", "test");
             con.close();
         } catch (Exception e) {
-            assertEquals("URL decoding", 1, -1);
+            assertEquals("DB connecting", 1, -1);
         }
-        assertEquals("URL decoding", 1, 1);
+        assertEquals("DB connecting", 1, 1);
     }
 
     @Test
@@ -57,8 +57,8 @@ public class HarderTests {
             stmt.close();
             con.close();
         } catch (Exception e) {
-            assertEquals("URL decoding", 1, -1);
+            assertEquals("DB request executing", 1, -1);
         }
-        assertEquals("URL decoding", 1, 1);
+        assertEquals("DB request executing", 1, 1);
     }
 }
