@@ -1,8 +1,6 @@
 package com.company;
 
 import com.sun.net.httpserver.HttpServer;
-import com.company.MyHandler;
-
 import java.net.InetSocketAddress;
 
 public class Main {
