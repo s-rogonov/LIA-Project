@@ -15,8 +15,7 @@ import java.util.List;
  */
 
 public class MyHandler implements HttpHandler {
-    List<Post> myList = new ArrayList<Post>();
-    MysqlCon con = new MysqlCon();
+    private MysqlCon con = new MysqlCon();
     @Override
     public void handle(HttpExchange t) throws IOException {
         StringBuilder response = new StringBuilder(org.apache.commons.io.IOUtils.toString(t.getRequestBody()));
@@ -38,9 +37,9 @@ public class MyHandler implements HttpHandler {
                 + response.toString()
                 + "</p><form method=`post`>First name:<br><input type=`text` name=`firstname`><br>Last name:<br><input type=`text` name=`lastname`><br>Your answer?<input type=`text` name=`post` width=`150`><br><input type=`submit`></form>".replace('`', '"'));
 
-        myList = con.getPosts();
-        for (int i = myList.size() - 1; i >= 0; i--) {
-            Post p = myList.get(i);
+        List<Post> myList = con.getPosts();
+        for (Post p:
+             myList) {
             response.append("<p><b>").append(p.first).append(" ").append(p.second).append("</b>: ").append(p.text).append("</p>");
         }
 

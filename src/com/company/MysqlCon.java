@@ -11,7 +11,7 @@ public class MysqlCon {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
-                    "jdbc:mysql://mysqldb:3306/chat", "app", "gAW-Y_r8A0");
+                    "jdbc:mysql://mysqldb:3306/chat", "app", "insertsecrethere");
             //here sonoo is database name, root is username and password
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from emp");
